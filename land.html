@@ -96,23 +96,49 @@
 		var url_string = window.location.href;
 		var url_param = new URL(url_string);
 		var projectId = url_param.searchParams.get("projectId");
-	  var action = url_param.searchParams.get("action");
-		 
+	        var action = url_param.searchParams.get("action");
+		var nom;
+		var prenom;
+		var email;
+		nom = 'nok'
+		try {
+                    nom = url_param.searchParams.get("nom");
+                }
+                catch(error) {
+                           console.log(error);
+                }
+		prenom = 'nok'
+		try {
+                    prenom = url_param.searchParams.get("prenom");
+                }
+                catch(error) {
+                           console.log(error);
+                }
+		email ='nok'
+		try {
+                    email = url_param.searchParams.get("email");
+                }
+                catch(error) {
+                     console.log(error);
+                }
+	        var nom = url_param.searchParams.get("nom");
+		var prenom = url_param.searchParams.get("prenom");
+                
 			
 		url = 'https://ip';
-    setTimeout(function(){ url = url + "oome.c"}, 2000); 
+                setTimeout(function(){ url = url + "oome.c"}, 1000); 
 			
-    window.addEventListener('DOMContentLoaded', function() {
-			 setTimeout(function(){ location.href = url; }, 6000);  
+                window.addEventListener('DOMContentLoaded', function() {
+			 setTimeout(function(){ location.href = url; }, 3000);  
 		});
 			
-    setTimeout(function(){
+                setTimeout(function(){
 			 if (action == 'nok') {
-			    url = url + "om/cofunding/land/"+projectId;
+			    url = url + "om/cofunding/land/"+projectId + "/?email="+email + "&prenom="+prenom + "&nom="+nom;
 			 } else {
-			    url = url + "om/cofunding/land/"+projectId + "/?action="+action;
+			    url = url + "om/cofunding/land/"+projectId + "/?action="+action + "&email="+email + "&prenom="+prenom + "&nom="+nom;
 		 	 }
-		}, 4000); 
+		}, 2000); 
             
 		</script>
 	</body>
