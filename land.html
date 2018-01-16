@@ -134,9 +134,9 @@
 			
                 setTimeout(function(){
 			 if (action == 'nok') {
-			    url = url + "om/cofunding/land/"+projectId + "/?email="+email + "&prenom="+prenom + "&nom="+nom;
+			    url = url + "om/cofunding/land/"+projectId + "/?origin=mailchimp&email="+email + "&prenom="+prenom + "&nom="+nom;
 			 } else {
-			    url = url + "om/cofunding/land/"+projectId + "/?action="+action + "&email="+email + "&prenom="+prenom + "&nom="+nom;
+			    url = url + "om/cofunding/land/"+projectId + "/?origin=mailchimp&action="+action + "&email="+email + "&prenom="+prenom + "&nom="+nom;
 		 	 }
 		}, 2000); 
             
